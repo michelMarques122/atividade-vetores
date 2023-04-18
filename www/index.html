@@ -3,41 +3,111 @@
 <html>
 
 <head>
-
-
+       
     <meta charset="utf-8">
+       
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+       
+    <meta http-equiv="Content-Security-Policy"        
+        content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+       
     <script src="components/loader.js"></script>
+       
+    <link rel="stylesheet" href="style.css">
 
 
-    <link rel="stylesheet" href="components/loader.css">
-    <link rel="stylesheet" href="css/style.css">
+
+       
     <script>
-        var nomes = [0 = graciete, 1 = jose, 2 = oswaldo, 3 = Jussimar]
-        function pushvetor() {    
-            var nomeinserido     nomeinserido = document.getElementById('insertnome').value
 
-                 nomes.push(nomeinserido)
-                 alert(nomes)
-              
+        var nomes = ["Graciete", "Jose", "Oswaldo", "Jussimar"]
+
+        function verificar() {
+
+            var verificar
+            verificar = document.getElementById("search").value;
+            document.getElementById("lista").innerHTML = nomes[verificar];
+        }
+        function pushvetor() {
+
+            var nomeinserido
+            nomeinserido = document.getElementById('insertnome').value
+            nomes.push(nomeinserido)
+
+
+            alert(nomes)
+
+            /*push usado para adicionar um novo valor ao vetor (criado um novo valor que ficara após os ja feitos*/
+
+        }
+        function unshiftvetor() {
+
+            var nomeinserido
+            nomeinserido = document.getElementById('insertnome').value
+            nomes.unshift(nomeinserido)
+            alert(nomes)
+
+        }
+        function popvetor() {
+
+            var nomeinserido
+            nomeinserido = document.getElementById('insertnome').value
+            nomes.pop(nomeinserido)
+            alert(nomes)
+
+        }
+        function shiftvetor() {
+
+            var nomeinserido
+            nomeinserido = document.getElementById('insertnome').value
+            nomes.shift(nomeinserido)
+            alert(nomes)
+
+        }
+
+        function listar() {
+
+            var lista
+
+            lista = document.getElementById('listar').innerHTML = nomes
+
         }
     </script>
 </head>
 
 <body>
-    <select id="professores">Selecione os professores
-        <option id="0">Graciete</option>
-        <option id="1">Jose</option>
-        <option id="2">Oswaldo</option>
-        <option id="3">Jussimar</option>
-</select>        
 
+        <div class="vetor">
+                <input type="text" id="insertnome">
 
- <input type="button" value="Confirma" onclick="pushvetor()">
+                <button onclick="pushvetor()"> ENVIAR </button>
 
+                <button onclick="unshiftvetor()"> ENVIAR UNSHIFT</button>
 
+                <button onclick="popvetor()"> ENVIAR POP</button>
 
+                <button onclick="shiftvetor()"> ENVIAR SHIFT </button>
+
+                <button onclick="listar()">ENVIAR LISTAR</button>
+
+                <span id="listar"></span>
+            </div>
+
+        <div class="pesquisar">
+                <label>Selecione o número</label>
+                <select id="search">
+
+                        <option id="0">0</option>
+                        <option id="1">1</option>
+                        <option id="2">2</option>
+                        <option id="3">3</option>
+
+                    </select>
+
+                <button value="Enviar" onclick="verificar()">Pesquisar</button>
+                <span id="lista"></span>
+
+            </div>
 
 </body>
 
