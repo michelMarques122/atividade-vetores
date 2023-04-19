@@ -1,2 +1,59 @@
-/**/
 
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+p{
+margin: 30px;
+font-size: 35px;
+}
+
+fieldset {
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid #ccc;
+  border-radius: 10px;
+  background-color: #d0f3ff;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008CBA;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.vetor {
+  margin-bottom: 20px;
+}
+
+.pesquisar {
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#listar {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#lista.error {
+  color: red;
+  font-weight: bold;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

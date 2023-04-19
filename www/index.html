@@ -13,7 +13,7 @@
        
     <script src="components/loader.js"></script>
        
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 
 
@@ -77,38 +77,41 @@
 
 <body>
 
-        <div class="vetor">
-                <input type="text" id="insertnome">
+    <fieldset>
+        <p>Enviar nome</p>
+            <div class="vetor">
+                    <input type="text" id="insertnome"><br><br>
 
-                <button onclick="pushvetor()"> ENVIAR </button>
+                    <button onclick="pushvetor()"> ENVIAR </button><br><br>
 
-                <button onclick="unshiftvetor()"> ENVIAR UNSHIFT</button>
+                    <button onclick="unshiftvetor()"> ENVIAR UNSHIFT</button><br><br>
 
-                <button onclick="popvetor()"> ENVIAR POP</button>
+                    <button onclick="popvetor()"> ENVIAR POP</button><br><br>
 
-                <button onclick="shiftvetor()"> ENVIAR SHIFT </button>
+                    <button onclick="shiftvetor()"> ENVIAR SHIFT </button><br><br>
 
-                <button onclick="listar()">ENVIAR LISTAR</button>
+                    <button onclick="listar()">ENVIAR LISTAR</button><br><br>
 
-                <span id="listar"></span>
-            </div>
+                    <span id="listar"></span>
+                </div>
 
-        <div class="pesquisar">
-                <label>Selecione o número</label>
-                <select id="search">
+            <div class="pesquisar">
+                    <label>Selecione o número</label>
+                    <select id="search">
 
-                        <option id="0">0</option>
-                        <option id="1">1</option>
-                        <option id="2">2</option>
-                        <option id="3">3</option>
+                            <option id="0">0</option>
+                            <option id="1">1</option>
+                            <option id="2">2</option>
+                            <option id="3">3</option>
 
-                    </select>
+                        </select>
+            <br>
+              <button value="Enviar" onclick="verificar()">Pesquisar</button>
+                    <span id="lista"></span>
 
-                <button value="Enviar" onclick="verificar()">Pesquisar</button>
-                <span id="lista"></span>
-
-            </div>
-
+               
+        </div>
+    </fieldset>
 </body>
 
 </html>
